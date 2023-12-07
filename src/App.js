@@ -9,6 +9,7 @@ import ReactFlow, {
   useEdgesState,
   addEdge,
   Panel,
+  MarkerType,
 } from 'reactflow';
 import { nanoid } from 'nanoid'; // 고유한 id를 부여하기 위해 주로 사용
 
@@ -53,6 +54,15 @@ const connectionLineStyle = {
   stroke: 'pink',
   animated: true,
 }
+//edge.
+const defaultEdgeOptions = {
+  style: { strokeWidth: 3, stroke: 'black' },
+  type: 'floating',
+  markerEnd: {
+    type: MarkerType.ArrowClosed,
+    color: 'black',
+  },
+};
  // 이벤트 발생시 동작할 것.
   const handleNameChange = (event) => {
     setNameValue(event.target.value);};
@@ -86,12 +96,13 @@ const connectionLineStyle = {
         edges={edges}
         onNodesChange={onNodesChange}//선택,드래그,삭제 
         onEdgesChange={onEdgesChange}//선택,드래그,삭제
-        //
+        //g
         onConnect={onConnect}
         fitView
         nodeTypes={nodeTypes}
         edgeTypes={{customedge:CustomEdge}}
         connectionLineStyle={connectionLineStyle}
+        defaultEdgeOptions={defaultEdgeOptions}
         
         
 

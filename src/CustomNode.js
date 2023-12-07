@@ -28,7 +28,7 @@ const CustomNode = ({ data}) => {
                  borderRadius: '50%', background: data.color }}>
         <CNHandle className='customhandle' type='source' position='bottom' id={nanoid()}/>
         <CNHandle className='customhandle'type='target' position="top" id={nanoid()}/>
-      <div CustomNode Body style={{ position: 'absolute', top: '50%', left: '50%',transform: 'translate(-50%, -50%)', 
+      <div style={{ position: 'absolute', top: '50%', left: '50%',transform: 'translate(-50%, -50%)', 
                     textAlign: 'center', fontSize:`${12+data.edgeCount*3}px`}}>
 
         {data.label}
