@@ -11,7 +11,7 @@ import {nanoid} from 'nanoid';
 const CustomNode = ({ data}) => {
 
     
-    const handleNodeClick = () => {
+    const handleNode2Click = () => {
         if (data.link) {
             window.open(data.link, '_blank'); // 노드 클릭 시 링크로 이동, 새 창을 여는 형식임. 크롬에서 탭으로 열려서 원래 화면으로 돌아가야 하는 불편함 발생.
         }
@@ -23,12 +23,12 @@ const CustomNode = ({ data}) => {
 
       
   return (//더블클릭 이벤트를 수집헤서 발생시 handleNodelClick을 작동
-    <div className="customNode" onDoubleClick={handleNodeClick} 
+    <div className="customNode" onDoubleClick={handleNode2Click} 
          style={{position: 'relative', width: `${nodeSize}px`, height: `${nodeSize}px`,
                  borderRadius: '50%', background: data.color }}>
         <CNHandle className='customhandle' type='source' position='bottom' id={nanoid()}/>
         <CNHandle className='customhandle'type='target' position="top" id={nanoid()}/>
-      <div CustomNode Body style={{ position: 'absolute', top: '50%', left: '50%',transform: 'translate(-50%, -50%)', 
+      <div style={{ position: 'absolute', top: '50%', left: '50%',transform: 'translate(-50%, -50%)', 
                     textAlign: 'center', fontSize:`${12+data.edgeCount*3}px`}}>
 
         {data.label}
