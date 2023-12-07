@@ -14,8 +14,8 @@ import ReactFlow, {
 import { nanoid } from 'nanoid'; // 고유한 id를 부여하기 위해 주로 사용
 
 import 'reactflow/dist/style.css';
-import CustomNode from './CustomNode';// custom node를 불러옴
-import CustomEdge from './CustomEdge';
+import CustomNode from './components/CustomNode';// custom node를 불러옴
+import CustomEdge from './components/CustomEdge';
 
 const initialNodes = []; // 초기엔 빈값
 const initialEdges = [];

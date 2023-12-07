@@ -23,7 +23,7 @@ function CustomEdge({ id, source, target, markerEnd, style }) {
   return (
     <path
       id={id}
-      className="CustomEdge"
+      className="react-flow__edge-path"
       d={edgePath}
       markerEnd={markerEnd}
       style={style}
